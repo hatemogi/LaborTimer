@@ -1,5 +1,5 @@
 //
-//  BTViewController.h
+//  BTLogViewCell.h
 //  BabyTimer
 //
 //  Created by hatemogi on 2014. 2. 6..
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BTViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface BTLogViewCell : UITableViewCell
 
 @end

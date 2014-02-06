@@ -21,6 +21,7 @@
 		543585B418A3A5040064D179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5435859618A3A5040064D179 /* UIKit.framework */; };
 		543585BC18A3A5040064D179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543585BA18A3A5040064D179 /* InfoPlist.strings */; };
 		543585BE18A3A5040064D179 /* BabyTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 543585BD18A3A5040064D179 /* BabyTimerTests.m */; };
+		54FB264918A3D2E7004C256B /* BTLogViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264818A3D2E7004C256B /* BTLogViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		543585B918A3A5040064D179 /* BabyTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BabyTimerTests-Info.plist"; sourceTree = "<group>"; };
 		543585BB18A3A5040064D179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		543585BD18A3A5040064D179 /* BabyTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTimerTests.m; sourceTree = "<group>"; };
+		54FB264718A3D2E7004C256B /* BTLogViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLogViewCell.h; sourceTree = "<group>"; };
+		54FB264818A3D2E7004C256B /* BTLogViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLogViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				543585A818A3A5040064D179 /* BTViewController.m */,
 				543585AA18A3A5040064D179 /* Images.xcassets */,
 				5435859918A3A5040064D179 /* Supporting Files */,
+				54FB264718A3D2E7004C256B /* BTLogViewCell.h */,
+				54FB264818A3D2E7004C256B /* BTLogViewCell.m */,
 			);
 			path = BabyTimer;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				543585A918A3A5040064D179 /* BTViewController.m in Sources */,
+				54FB264918A3D2E7004C256B /* BTLogViewCell.m in Sources */,
 				543585A318A3A5040064D179 /* BTAppDelegate.m in Sources */,
 				5435859F18A3A5040064D179 /* main.m in Sources */,
 			);
@@ -461,6 +467,7 @@
 				543585C318A3A5040064D179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		543585C418A3A5040064D179 /* Build configuration list for PBXNativeTarget "BabyTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +476,7 @@
 				543585C618A3A5040064D179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
