@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTTimer.h"
 
 @interface BTViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *relaxButton;
+@property (weak, nonatomic) IBOutlet UIButton *signButton;
+@property (weak, nonatomic) IBOutlet BTTimer *timer;
+
+- (IBAction)buttonTouched:(id)sender;
 
 @end

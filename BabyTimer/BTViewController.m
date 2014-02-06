@@ -7,9 +7,10 @@
 //
 
 #import "BTViewController.h"
+#import "BTLogViewCell.h"
+#import "BTCircleButton.h"
 
 @interface BTViewController ()
-
 @end
 
 @implementation BTViewController
@@ -17,7 +18,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +39,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"LogCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    BTLogViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     cell.textLabel.text = @"텍스트";
@@ -48,5 +48,18 @@
 }
 
 
+- (IBAction)buttonTouched:(id)sender
+{
+    NSLog(@"%@ touched", sender);
+    UIButton *btn = (UIButton *)sender;
+    UIButton *other = self.signButton;
+    btn.selected = !btn.selected;
+    if (sender == self.signButton) {
+        NSLog(@"진통시작");
+        other = self.relaxButton;
+    }
+    other.selected = false;
+    
+}
 
 @end

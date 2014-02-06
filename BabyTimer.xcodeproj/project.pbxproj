@@ -22,6 +22,9 @@
 		543585BC18A3A5040064D179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543585BA18A3A5040064D179 /* InfoPlist.strings */; };
 		543585BE18A3A5040064D179 /* BabyTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 543585BD18A3A5040064D179 /* BabyTimerTests.m */; };
 		54FB264918A3D2E7004C256B /* BTLogViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264818A3D2E7004C256B /* BTLogViewCell.m */; };
+		54FB264C18A3D6C6004C256B /* BTCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264B18A3D6C6004C256B /* BTCircleButton.m */; };
+		54FB264F18A40098004C256B /* BTTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264E18A40098004C256B /* BTTimer.m */; };
+		54FB265018A40098004C256B /* BTTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264E18A40098004C256B /* BTTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		543585BD18A3A5040064D179 /* BabyTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTimerTests.m; sourceTree = "<group>"; };
 		54FB264718A3D2E7004C256B /* BTLogViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLogViewCell.h; sourceTree = "<group>"; };
 		54FB264818A3D2E7004C256B /* BTLogViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLogViewCell.m; sourceTree = "<group>"; };
+		54FB264A18A3D6C6004C256B /* BTCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCircleButton.h; sourceTree = "<group>"; };
+		54FB264B18A3D6C6004C256B /* BTCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCircleButton.m; sourceTree = "<group>"; };
+		54FB264D18A40098004C256B /* BTTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTimer.h; sourceTree = "<group>"; };
+		54FB264E18A40098004C256B /* BTTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +131,10 @@
 				5435859918A3A5040064D179 /* Supporting Files */,
 				54FB264718A3D2E7004C256B /* BTLogViewCell.h */,
 				54FB264818A3D2E7004C256B /* BTLogViewCell.m */,
+				54FB264A18A3D6C6004C256B /* BTCircleButton.h */,
+				54FB264B18A3D6C6004C256B /* BTCircleButton.m */,
+				54FB264D18A40098004C256B /* BTTimer.h */,
+				54FB264E18A40098004C256B /* BTTimer.m */,
 			);
 			path = BabyTimer;
 			sourceTree = "<group>";
@@ -256,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				543585A918A3A5040064D179 /* BTViewController.m in Sources */,
+				54FB264F18A40098004C256B /* BTTimer.m in Sources */,
 				54FB264918A3D2E7004C256B /* BTLogViewCell.m in Sources */,
 				543585A318A3A5040064D179 /* BTAppDelegate.m in Sources */,
+				54FB264C18A3D6C6004C256B /* BTCircleButton.m in Sources */,
 				5435859F18A3A5040064D179 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				543585BE18A3A5040064D179 /* BabyTimerTests.m in Sources */,
+				54FB265018A40098004C256B /* BTTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
