@@ -15,7 +15,7 @@
 
 - (id)init
 {
-    if ([super init]) {
+    if (self = [super init]) {
         list = [[NSMutableArray alloc] init];
     }
     return self;
@@ -28,7 +28,21 @@
 
 - (void)signal
 {
-    
+    [self signal:[NSDate date]];
+}
+
+- (void)signal:(NSDate *)time
+{
+    [list addObject:time];
+    NSLog(@"%@", list);
+}
+
+- (NSDate *)lastTimestamp
+{
+	if ([list count] > 0) {
+		return [list lastObject];
+	}
+	return [NSDate date];
 }
 
 @end

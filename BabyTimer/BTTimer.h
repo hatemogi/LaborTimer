@@ -12,5 +12,7 @@
 
 - (void)relax;
 - (void)signal;
+- (void)signal:(NSDate *)time;
+- (NSDate *)lastTimestamp;
 
 @end

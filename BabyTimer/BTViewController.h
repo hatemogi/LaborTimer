@@ -10,7 +10,8 @@
 #import "BTTimer.h"
 
 @interface BTViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
+@property (strong, nonatomic) IBOutlet UITableView *logView;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *relaxButton;
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
 @property (weak, nonatomic) IBOutlet BTTimer *timer;
