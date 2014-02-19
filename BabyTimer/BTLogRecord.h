@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define BTIntervalUnknown -1
+
 @interface BTLogRecord : NSObject
 
 @property (readonly) NSDate *at;

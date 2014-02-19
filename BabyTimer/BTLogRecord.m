@@ -13,6 +13,15 @@
     NSTimeInterval _dt;
 }
 
+-(id)initAt:(NSDate *)at
+{
+    if (self = [super init]) {
+        _at = at;
+        _dt = BTIntervalUnknown;
+    }
+    return self;
+}
+
 -(id)initAt:(NSDate *)at dt:(NSTimeInterval)dt
 {
     if (self = [super init]) {

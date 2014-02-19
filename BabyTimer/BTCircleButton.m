@@ -19,13 +19,13 @@
     return self;
 }
 
+
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-
     [self.titleLabel.textColor setStroke];
     [self.titleLabel.shadowColor setFill];
-
     CGRect myframe = CGRectInset(self.bounds, 3, 3);
     
     CGContextSetLineWidth(ctx, 2);
@@ -33,7 +33,6 @@
     CGContextFillPath(ctx);
     CGContextAddEllipseInRect(ctx, myframe);
     CGContextStrokePath(ctx);
-    NSLog(@"%d", self.state);
 }
 
 @end

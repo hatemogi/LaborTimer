@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet BTTimer *timer;
 
 - (IBAction)buttonTouched:(id)sender;
+- (IBAction)buttonRedraw:(id)sender;
 
 @end
