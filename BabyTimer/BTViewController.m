@@ -21,20 +21,19 @@
 
 @implementation BTViewController {
     NSTimer *periodicTimer;
-    NSMutableArray *items;
+    BTLogSession *_session;
     NSDateFormatter *dateFormatter;
-    
-    BTLogSession *session;
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    items = [[NSMutableArray alloc] init];
-    dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"HH:mm:ss"];
-    session = [BTLogSession new];
-    session = [[session prependSession] prependSession];
+    _session = [BTLogSession new];
+    _session = [[_session prependSession] prependSession];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,50 +65,9 @@
 
 - (void)updateTime:(NSTimer *)timer
 {
-    NSTimeInterval dt = [session.lastStampAt timeIntervalSinceNow];
-    self.timeLabel.text = [self intervalString:dt];
+    self.timeLabel.text = @"00:01";
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return session.stampCount + session.sessionCount - 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([indexPath item] < session.stampCount) {
-        BTLogViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LogCell" forIndexPath:indexPath];
-        
-        BTLogRecord *record = (BTLogRecord *)session.records[[indexPath item]];
-        cell.textLabel.text = [dateFormatter stringFromDate:record.at];
-        if (record.dt < 0.001) {
-            cell.detailTextLabel.text = @"시작";
-        } else {
-            cell.detailTextLabel.text = [self intervalString:record.dt];
-        }
-        return cell;
-    } else {
-        BTLogViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SessionCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"세션은 여기에";
-        return cell;
-    }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
-    NSLog(@"빠라바라밤!");
-}
-
-- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
-}
 
 
 - (IBAction)buttonRedraw:(id)sender
@@ -124,12 +82,7 @@
     if (sender == self.signButton) {
         [self.signButton setNeedsDisplay];
         NSLog(@"진통시작");
-        NSTimeInterval dt = -[self.timer.lastTimestamp timeIntervalSinceNow];
-        NSLog(@"dt = %f", dt);
-        session = [session stamp:[NSDate date]];
-        [self.timer signal];
-        [self.logView reloadData];
-    }
+     }
 }
 
 - (IBAction)selectSession:(id)sender
@@ -137,20 +90,46 @@
     NSLog(@"세션 선택됨");
 }
 
-- (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return NO;
+    return 1;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return YES;
+    return _session.stampCount + _session.sessionCount - 1;
 }
 
-- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"action!");
-    
+    if ([indexPath item] < _session.stampCount) {
+        BTLogViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LogCell" forIndexPath:indexPath];
+        
+        BTLogRecord *record = (BTLogRecord *)_session.records[[indexPath item]];
+        cell.textLabel.text = [dateFormatter stringFromDate:record.at];
+        if (record.dt < 0.001) {
+            cell.detailTextLabel.text = @"시작";
+        } else {
+            cell.detailTextLabel.text = [self intervalString:record.dt];
+        }
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SessionCell" forIndexPath:indexPath];
+        cell.textLabel.text = @"세션은 여기에";
+        NSLog(@"쎌 컨피겨");
+        return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+    NSLog(@"빠라바라밤!");
+}
+
+- (NSString *)lastSessionIntervalText;
+{
+    return @"00:00";
 }
 
 @end
