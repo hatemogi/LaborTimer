@@ -64,8 +64,8 @@
 
 - (void)updateTime:(NSTimer *)timer
 {
-    NSTimeInterval dt = [[_session lastStampAt] timeIntervalSinceNow];
-    self.timeLabel.text = [self intervalString:dt];
+    self.currentTimeLabel.text = [self intervalString:[[_session lastStampAt] timeIntervalSinceNow]];
+    self.sessionTimeLabel.text = [self intervalString:[[_session firstStampAt] timeIntervalSinceNow]];
 }
 
 
@@ -142,6 +142,9 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"커밋 에디팅!");
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"삭제요청");
+    }
+
 }
 @end

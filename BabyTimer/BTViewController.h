@@ -10,7 +10,8 @@
 
 @interface BTViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *logView;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sessionTimeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *relaxButton;
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
 
