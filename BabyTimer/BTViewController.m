@@ -65,7 +65,8 @@
 
 - (void)updateTime:(NSTimer *)timer
 {
-    self.timeLabel.text = @"00:01";
+    NSTimeInterval dt = [[_session lastStampAt] timeIntervalSinceNow];
+    self.timeLabel.text = [self intervalString:dt];
 }
 
 
@@ -80,7 +81,10 @@
 {
     NSLog(@"%@ touched, state = %d", sender, ((UIButton *)sender).highlighted);
     if (sender == self.signButton) {
+        _session = [_session stamp:[NSDate date]];
+
         [self.signButton setNeedsDisplay];
+        [self.logView reloadData];
         NSLog(@"진통시작");
      }
 }
@@ -124,12 +128,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
+    if (_session.stampCount <= [indexPath item]) {
+        NSLog(@"히스토리보기");
+    }
     NSLog(@"빠라바라밤!");
 }
 
-- (NSString *)lastSessionIntervalText;
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return @"00:00";
+    return UITableViewCellEditingStyleDelete;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"커밋 에디팅!");
+}
 @end
