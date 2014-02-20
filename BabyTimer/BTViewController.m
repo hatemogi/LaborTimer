@@ -23,7 +23,6 @@
     NSTimer *periodicTimer;
     BTLogSession *_session;
     NSDateFormatter *dateFormatter;
-
 }
 
 - (void)viewDidLoad
@@ -79,11 +78,9 @@
     
 - (IBAction)buttonTouched:(id)sender
 {
-    NSLog(@"%@ touched, state = %d", sender, ((UIButton *)sender).highlighted);
     if (sender == self.signButton) {
         _session = [_session stamp:[NSDate date]];
 
-        [self.signButton setNeedsDisplay];
         [self.logView reloadData];
         NSLog(@"진통시작");
      }
@@ -120,7 +117,6 @@
     } else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SessionCell" forIndexPath:indexPath];
         cell.textLabel.text = @"세션은 여기에";
-        NSLog(@"쎌 컨피겨");
         return cell;
     }
 }
