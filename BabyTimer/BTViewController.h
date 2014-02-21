@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *logView;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sessionTimeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *relaxButton;
+@property (weak, nonatomic) IBOutlet UILabel *averageTimeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
 
 - (IBAction)buttonTouched:(id)sender;

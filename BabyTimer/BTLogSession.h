@@ -23,6 +23,7 @@
 
 // 진통 타임 스탬프 찍기. 세션 알아서 구분.
 - (BTLogSession *)stamp:(NSDate *)at;
+- (BTLogSession *)cancelStamp:(NSUInteger)index;
 - (BTLogSession *)prependSession;
 - (BTLogSession *)nextSession:(NSUInteger)index;
 - (BTLogSession *)reset;

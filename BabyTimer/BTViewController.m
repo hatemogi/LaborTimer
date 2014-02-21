@@ -7,7 +7,6 @@
 //
 
 #import "BTViewController.h"
-#import "BTLogViewCell.h"
 #import "BTCircleButton.h"
 #import "BTLogRecord.h"
 #import "BTLogSession.h"
@@ -21,8 +20,8 @@
 
 @implementation BTViewController {
     NSTimer *periodicTimer;
-    BTLogSession *_session;
     NSDateFormatter *dateFormatter;
+    BTLogSession *_session;
 }
 
 - (void)viewDidLoad
@@ -31,7 +30,7 @@
     dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"HH:mm:ss"];
     _session = [BTLogSession new];
-    _session = [[_session prependSession] prependSession];
+//    _session = [[_session prependSession] prependSession];
 
 }
 
@@ -66,13 +65,18 @@
 {
     self.currentTimeLabel.text = [self intervalString:[[_session lastStampAt] timeIntervalSinceNow]];
     self.sessionTimeLabel.text = [self intervalString:[[_session firstStampAt] timeIntervalSinceNow]];
-}
+    double avr = [_session averageInterval];
+    if (avr > 0.0) {
+        self.averageTimeLabel.text = [self intervalString:avr];
+    } else {
+        self.averageTimeLabel.text = @"진통간격";
+    }
 
+}
 
 - (IBAction)buttonRedraw:(id)sender
 {
-    UIButton *btn = (UIButton *)sender;
-    [btn setNeedsDisplay];
+    [sender setNeedsDisplay];
 }
     
 - (IBAction)buttonTouched:(id)sender
@@ -105,7 +109,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath item] < _session.stampCount) {
-        BTLogViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LogCell" forIndexPath:indexPath];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LogCell" forIndexPath:indexPath];
         
         BTLogRecord *record = (BTLogRecord *)_session.records[[indexPath item]];
         cell.textLabel.text = [dateFormatter stringFromDate:record.at];
@@ -128,7 +132,6 @@
     if (_session.stampCount <= [indexPath item]) {
         NSLog(@"히스토리보기");
     }
-    NSLog(@"빠라바라밤!");
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -144,7 +147,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSLog(@"삭제요청");
+        [_session cancelStamp:_session.stampCount - 1 - [indexPath item]];
+        [self.logView reloadData];
     }
 
 }

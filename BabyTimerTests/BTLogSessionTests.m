@@ -106,8 +106,16 @@
     XCTAssertEqual((NSUInteger)3, session.stampCount);
     session = [session reset];
     XCTAssertEqual((NSUInteger)0, session.stampCount);
-    
+}
 
+- (void)testCancelStamp
+{
+    session = [[[session stamp:t1] stamp:t2] stamp:t3];
+    XCTAssertEqual((NSUInteger)3, session.stampCount);
+    XCTAssertEqualWithAccuracy(45.0, session.averageInterval, 0.001);
+    session = [session cancelStamp:1];
+    XCTAssertEqual((NSUInteger)2, session.stampCount);
+    XCTAssertEqualWithAccuracy(90.0, session.averageInterval, 0.001);
 }
 
 @end

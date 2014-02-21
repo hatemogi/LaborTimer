@@ -54,13 +54,16 @@
 
 - (BTLogSession *)stamp:(NSDate *)at
 {
-    if (timestamps.count == 0) {
-        [timestamps addObject:at];
-    }
-    NSLog(@"%f", [at timeIntervalSinceDate:self.lastStampAt]);
-    if ([at timeIntervalSinceDate:self.lastStampAt] >= 1.0) {
-        [timestamps addObject:at];
-    }
+//    if (timestamps.count == 0) {
+//        [timestamps addObject:at];
+//    }
+    [timestamps addObject:at];
+    return self;
+}
+
+- (BTLogSession *)cancelStamp:(NSUInteger)index
+{
+    [timestamps removeObjectAtIndex:index];
     return self;
 }
 
