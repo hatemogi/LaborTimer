@@ -86,9 +86,7 @@
 {
     XCTAssertEqual((NSUInteger)0, session.records.count);
 
-    session = [session stamp:t1];
-    session = [session stamp:t2];
-    session = [session stamp:t3];
+    session = [[[session stamp:t1] stamp:t2] stamp:t3];
     NSArray *recs = session.records;
     XCTAssertEqual((NSUInteger)3, recs.count);
     
@@ -100,6 +98,16 @@
     XCTAssertEqualWithAccuracy(30, r[0].dt, 0.001);
     XCTAssertEqualWithAccuracy(60, r[1].dt, 0.001);
     XCTAssertEqualWithAccuracy( 0, r[2].dt, 0.001);
+}
+
+- (void)testReset
+{
+    session = [[[session stamp:t1] stamp:t2] stamp:t3];
+    XCTAssertEqual((NSUInteger)3, session.stampCount);
+    session = [session reset];
+    XCTAssertEqual((NSUInteger)0, session.stampCount);
+    
+
 }
 
 @end

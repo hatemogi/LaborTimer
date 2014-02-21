@@ -69,7 +69,6 @@
 }
 
 
-
 - (IBAction)buttonRedraw:(id)sender
 {
     UIButton *btn = (UIButton *)sender;
@@ -81,9 +80,11 @@
     if (sender == self.signButton) {
         _session = [_session stamp:[NSDate date]];
 
-        [self.logView reloadData];
-        NSLog(@"진통시작");
-     }
+    } else {
+        // reset button
+        _session = [_session reset];
+    }
+    [self.logView reloadData];
 }
 
 - (IBAction)selectSession:(id)sender

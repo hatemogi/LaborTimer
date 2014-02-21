@@ -25,6 +25,7 @@
 - (BTLogSession *)stamp:(NSDate *)at;
 - (BTLogSession *)prependSession;
 - (BTLogSession *)nextSession:(NSUInteger)index;
+- (BTLogSession *)reset;
 - (NSArray *)records;
 
 @end

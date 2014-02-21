@@ -15,15 +15,22 @@
 - (id)init
 {
     if (self = [super init]) {
-        timestamps = [[NSMutableArray alloc] init];
+        timestamps = [NSMutableArray new];
     }
     return self;
 }
 
 - (BTLogSession *)prependSession
 {
-    BTLogSession *head = [[BTLogSession alloc] init];
+    BTLogSession *head = [BTLogSession new];
     head->next = self;
+    return head;
+}
+
+- (BTLogSession *)reset
+{
+    BTLogSession *head = [BTLogSession new];
+    head->next = self->next;
     return head;
 }
 
@@ -93,10 +100,10 @@
 {
     NSArray *dts = [self intervals];
     if (dts.count == 0) return 0.0;
-    __block NSTimeInterval sum = 0;
-    [dts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        sum += [(NSNumber *)obj doubleValue];
-    }];
+    NSTimeInterval sum = 0;
+    for (NSNumber *n in dts) {
+        sum += [n doubleValue];
+    }
     return sum / dts.count;
 }
 
