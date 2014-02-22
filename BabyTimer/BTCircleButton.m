@@ -28,7 +28,7 @@
     [self.titleLabel.shadowColor setFill];
     CGRect myframe = CGRectInset(self.bounds, 3, 3);
     
-    CGContextSetLineWidth(ctx, 2);
+    CGContextSetLineWidth(ctx, 1.5);
     CGContextAddEllipseInRect(ctx, myframe);
     CGContextFillPath(ctx);
     CGContextAddEllipseInRect(ctx, myframe);

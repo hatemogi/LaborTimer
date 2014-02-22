@@ -31,6 +31,8 @@
     [dateFormatter setDateFormat:@"HH:mm:ss"];
     _session = [BTLogSession new];
 //    _session = [[_session prependSession] prependSession];
+//    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+//    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 
 }
 
@@ -88,6 +90,7 @@
         // reset button
         _session = [_session reset];
     }
+//    [self buttonRedraw:sender];
     [self.logView reloadData];
 }
 
