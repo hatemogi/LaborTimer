@@ -56,63 +56,76 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11z-Tl-kc6" userLabel="ButtonView">
-                                <rect key="frame" x="0.0" y="180" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="180" width="320" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76L-GN-Kip" customClass="BTCircleButton">
-                                        <rect key="frame" x="50" y="10" width="80" height="80"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4H6-25-cCu">
+                                        <rect key="frame" x="0.0" y="1" width="320" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <state key="normal" title="진통">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <state key="selected">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="PoT-kG-1nF"/>
-                                            <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchDown" id="Y5p-Qb-Dj9"/>
-                                            <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="biY-gu-dSL"/>
-                                            <action selector="buttonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8ig-Wy-YC0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-Em-qOk" customClass="BTCircleButton">
-                                        <rect key="frame" x="190" y="10" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <state key="normal" title="리셋">
-                                            <color key="titleColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <state key="selected">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Edk-bk-zSc"/>
-                                            <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="LaP-s1-T0f"/>
-                                            <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchDown" id="XU1-vf-yHH"/>
-                                            <action selector="buttonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vtY-8Z-eRm"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76L-GN-Kip" customClass="BTCircleButton">
+                                                <rect key="frame" x="50" y="16" width="85" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <state key="normal" title="진통">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="PoT-kG-1nF"/>
+                                                    <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchDown" id="Y5p-Qb-Dj9"/>
+                                                    <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="biY-gu-dSL"/>
+                                                    <action selector="buttonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8ig-Wy-YC0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-Em-qOk" customClass="BTCircleButton">
+                                                <rect key="frame" x="185" y="16" width="85" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <state key="normal" title="재설정">
+                                                    <color key="titleColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Edk-bk-zSc"/>
+                                                    <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="LaP-s1-T0f"/>
+                                                    <action selector="buttonRedraw:" destination="vXZ-lx-hvc" eventType="touchDown" id="XU1-vf-yHH"/>
+                                                    <action selector="buttonTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vtY-8Z-eRm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="AuB-zV-169"/>
+                                            <constraint firstAttribute="height" constant="118" id="G4f-Ap-oLI"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="tHR-dw-2Jf"/>
+                                    <constraint firstItem="4H6-25-cCu" firstAttribute="leading" secondItem="11z-Tl-kc6" secondAttribute="leading" id="ACw-06-znj"/>
+                                    <constraint firstItem="4H6-25-cCu" firstAttribute="top" secondItem="11z-Tl-kc6" secondAttribute="top" constant="1" id="YwH-Vb-Wtn"/>
+                                    <constraint firstAttribute="height" constant="120" id="b9O-uP-Nbj"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-4L-UEa">
-                                <rect key="frame" x="0.0" y="280" width="320" height="288"/>
+                                <rect key="frame" x="0.0" y="300" width="320" height="268"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>

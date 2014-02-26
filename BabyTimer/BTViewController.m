@@ -45,7 +45,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    periodicTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
+    periodicTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
     NSLog(@"timer registered");
 }
 
@@ -71,7 +71,7 @@
     if (avr > 0.0) {
         self.averageTimeLabel.text = [self intervalString:avr];
     } else {
-        self.averageTimeLabel.text = @"진통간격";
+        self.averageTimeLabel.text = @"진통주기";
     }
 
 }
