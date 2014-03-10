@@ -25,6 +25,7 @@
 		543585B418A3A5040064D179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5435859618A3A5040064D179 /* UIKit.framework */; };
 		543585BC18A3A5040064D179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543585BA18A3A5040064D179 /* InfoPlist.strings */; };
 		543585BE18A3A5040064D179 /* BabyTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 543585BD18A3A5040064D179 /* BabyTimerTests.m */; };
+		54F8894718CD78BB00CB05F9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F8894618CD78BB00CB05F9 /* iPad.storyboard */; };
 		54FB264C18A3D6C6004C256B /* BTCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264B18A3D6C6004C256B /* BTCircleButton.m */; };
 		54FB265318A472C1004C256B /* BTLogRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB265218A472C0004C256B /* BTLogRecord.m */; };
 		54FB265418A472C1004C256B /* BTLogRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB265218A472C0004C256B /* BTLogRecord.m */; };
@@ -67,6 +68,7 @@
 		543585B918A3A5040064D179 /* BabyTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BabyTimerTests-Info.plist"; sourceTree = "<group>"; };
 		543585BB18A3A5040064D179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		543585BD18A3A5040064D179 /* BabyTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTimerTests.m; sourceTree = "<group>"; };
+		54F8894618CD78BB00CB05F9 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		54FB264A18A3D6C6004C256B /* BTCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCircleButton.h; sourceTree = "<group>"; };
 		54FB264B18A3D6C6004C256B /* BTCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCircleButton.m; sourceTree = "<group>"; };
 		54FB265118A472C0004C256B /* BTLogRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLogRecord.h; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				543585A418A3A5040064D179 /* Main.storyboard */,
+				54F8894618CD78BB00CB05F9 /* iPad.storyboard */,
 				543585A118A3A5040064D179 /* BTAppDelegate.h */,
 				543585A218A3A5040064D179 /* BTAppDelegate.m */,
 				543585A718A3A5040064D179 /* BTViewController.h */,
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F8894718CD78BB00CB05F9 /* iPad.storyboard in Resources */,
 				543585AB18A3A5040064D179 /* Images.xcassets in Resources */,
 				5435859D18A3A5040064D179 /* InfoPlist.strings in Resources */,
 				543585A618A3A5040064D179 /* Main.storyboard in Resources */,
@@ -419,7 +423,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BabyTimer/BabyTimer-Prefix.pch";
 				INFOPLIST_FILE = "BabyTimer/BabyTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -432,7 +438,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BabyTimer/BabyTimer-Prefix.pch";
 				INFOPLIST_FILE = "BabyTimer/BabyTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -30,10 +30,6 @@
     dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"HH:mm:ss"];
     _session = [BTLogSession new];
-//    _session = [[_session prependSession] prependSession];
-//    self.modalPresentationStyle = UIModalPresentationCurrentContext;
-//    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -155,4 +151,6 @@
     }
 
 }
+
+
 @end
