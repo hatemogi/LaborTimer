@@ -69,7 +69,6 @@
     } else {
         self.averageTimeLabel.text = @"진통주기";
     }
-
 }
 
 - (IBAction)buttonRedraw:(id)sender
@@ -149,7 +148,6 @@
         [_session cancelStamp:_session.stampCount - 1 - [indexPath item]];
         [self.logView reloadData];
     }
-
 }
 
 

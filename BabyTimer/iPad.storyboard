@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="hq9-8t-dSw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="hq9-8t-dSw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -127,31 +127,31 @@
                                     <constraint firstItem="Fxe-Xz-dHn" firstAttribute="top" secondItem="NfV-V0-eb1" secondAttribute="top" constant="1" id="w3G-0a-W9K"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QAz-EC-j5b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" allowsSelectionDuringEditing="YES" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RSe-h0-58Q">
                                 <rect key="frame" x="0.0" y="480" width="768" height="544"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <color key="tintColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogCell" textLabel="sBb-HK-RsB" detailTextLabel="mod-6q-LLB" style="IBUITableViewCellStyleValue1" id="7Cn-cv-sIo">
-                                        <rect key="frame" x="0.0" y="22" width="768" height="56"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LogCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LogCell" textLabel="bbw-d8-pKB" detailTextLabel="g73-I9-bci" style="IBUITableViewCellStyleValue1" id="np5-HX-VSa">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Cn-cv-sIo" id="cYP-MP-imd">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="55"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="np5-HX-VSa" id="aXo-zv-Ned">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="2/7 10:44" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBb-HK-RsB">
-                                                    <rect key="frame" x="15" y="13" width="100" height="29"/>
+                                                <label clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bbw-d8-pKB">
+                                                    <rect key="frame" x="15" y="13" width="41" height="27"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
-                                                <label clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="08:44" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mod-6q-LLB">
-                                                    <rect key="frame" x="693" y="13" width="60" height="29"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g73-I9-bci">
+                                                    <rect key="frame" x="698" y="13" width="55" height="27"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -160,10 +160,9 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
-                                <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="hq9-8t-dSw" id="x75-Ca-tzT"/>
-                                    <outlet property="delegate" destination="hq9-8t-dSw" id="hLa-SQ-ixc"/>
+                                    <outlet property="dataSource" destination="hq9-8t-dSw" id="Ncq-eB-lsw"/>
+                                    <outlet property="delegate" destination="hq9-8t-dSw" id="dFa-4y-eNd"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -173,13 +172,9 @@
                         <constraints>
                             <constraint firstItem="NfV-V0-eb1" firstAttribute="leading" secondItem="XMQ-fX-xu9" secondAttribute="leading" id="BuI-XE-5wd"/>
                             <constraint firstItem="x9W-E8-HT4" firstAttribute="top" secondItem="49l-hn-ffs" secondAttribute="bottom" constant="-320" id="Hgg-DP-aLp"/>
-                            <constraint firstItem="QAz-EC-j5b" firstAttribute="leading" secondItem="XMQ-fX-xu9" secondAttribute="leading" id="SZy-zh-XU2"/>
                             <constraint firstAttribute="trailing" secondItem="49l-hn-ffs" secondAttribute="trailing" id="Vh3-M8-PRv"/>
-                            <constraint firstItem="4Jo-7k-0A8" firstAttribute="top" secondItem="QAz-EC-j5b" secondAttribute="bottom" id="e55-AY-03j"/>
-                            <constraint firstAttribute="trailing" secondItem="QAz-EC-j5b" secondAttribute="trailing" id="oOB-Mt-2WM"/>
                             <constraint firstItem="NfV-V0-eb1" firstAttribute="top" secondItem="XMQ-fX-xu9" secondAttribute="top" constant="320" id="q4a-d2-xvU"/>
                             <constraint firstAttribute="trailing" secondItem="NfV-V0-eb1" secondAttribute="trailing" id="sCe-b8-CwX"/>
-                            <constraint firstItem="QAz-EC-j5b" firstAttribute="top" secondItem="Fxe-Xz-dHn" secondAttribute="bottom" constant="1" id="wCq-b4-7e4"/>
                             <constraint firstItem="49l-hn-ffs" firstAttribute="leading" secondItem="XMQ-fX-xu9" secondAttribute="leading" id="zYD-rX-vAX"/>
                         </constraints>
                     </view>
@@ -187,7 +182,7 @@
                     <connections>
                         <outlet property="averageTimeLabel" destination="FBE-FR-apA" id="q3G-u2-C0H"/>
                         <outlet property="currentTimeLabel" destination="UfE-yB-syZ" id="RaL-mX-9kg"/>
-                        <outlet property="logView" destination="QAz-EC-j5b" id="zpc-aS-6XH"/>
+                        <outlet property="logView" destination="RSe-h0-58Q" id="pZ7-93-Ch9"/>
                         <outlet property="sessionTimeLabel" destination="gyr-dU-80I" id="TSG-Wv-Red"/>
                         <outlet property="signButton" destination="rNJ-fJ-51z" id="tso-ry-U7C"/>
                     </connections>
