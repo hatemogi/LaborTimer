@@ -6,8 +6,6 @@
 //  Copyright (c) 2014년 hatemogi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #define BTIntervalUnknown -1
 
 @interface BTLogRecord : NSObject

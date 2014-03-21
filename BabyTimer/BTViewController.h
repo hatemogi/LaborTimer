@@ -6,8 +6,6 @@
 //  Copyright (c) 2014년 hatemogi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface BTViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *logView;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;

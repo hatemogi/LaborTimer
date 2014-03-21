@@ -6,8 +6,6 @@
 //  Copyright (c) 2014년 hatemogi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface BTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

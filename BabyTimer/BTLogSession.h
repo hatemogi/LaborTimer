@@ -6,7 +6,6 @@
 //  Copyright (c) 2014년 hatemogi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "BTLogRecord.h"
 
 @interface BTLogSession : NSObject {
