@@ -67,7 +67,7 @@
     if (avr > 0.0) {
         self.averageTimeLabel.text = [self intervalString:avr];
     } else {
-        self.averageTimeLabel.text = @"진통주기";
+        self.averageTimeLabel.text = NSLocalizedString(@"BTAvrPeriod", @"진통주기");
     }
 }
 
@@ -112,7 +112,7 @@
         BTLogRecord *record = (BTLogRecord *)_session.records[[indexPath item]];
         cell.textLabel.text = [dateFormatter stringFromDate:record.at];
         if (record.dt < 0.001) {
-            cell.detailTextLabel.text = @"시작";
+            cell.detailTextLabel.text = NSLocalizedString(@"BTStart", @"시작");
         } else {
             cell.detailTextLabel.text = [self intervalString:record.dt];
         }

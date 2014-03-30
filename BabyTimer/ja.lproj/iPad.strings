@@ -1,0 +1,21 @@
+
+/* Class = "IBUILabel"; text = "진통주기"; ObjectID = "FBE-FR-apA"; */
+"FBE-FR-apA.text" = "平均";
+
+/* Class = "IBUILabel"; text = "00:00"; ObjectID = "UfE-yB-syZ"; */
+"UfE-yB-syZ.text" = "00:00";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "bbw-d8-pKB"; */
+"bbw-d8-pKB.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "g73-I9-bci"; */
+"g73-I9-bci.text" = "Detail";
+
+/* Class = "IBUIButton"; normalTitle = "재설정"; ObjectID = "gqn-xr-mNL"; */
+"gqn-xr-mNL.normalTitle" = "リセット";
+
+/* Class = "IBUILabel"; text = "00:00"; ObjectID = "gyr-dU-80I"; */
+"gyr-dU-80I.text" = "00:00";
+
+/* Class = "IBUIButton"; normalTitle = "진통"; ObjectID = "rNJ-fJ-51z"; */
+"rNJ-fJ-51z.normalTitle" = "陣痛";

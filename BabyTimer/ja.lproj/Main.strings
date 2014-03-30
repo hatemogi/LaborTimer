@@ -1,0 +1,30 @@
+
+/* Class = "IBUILabel"; text = "08:44"; ObjectID = "49i-pv-WRy"; */
+"49i-pv-WRy.text" = "08:44";
+
+/* Class = "IBUIButton"; normalTitle = "Labor"; ObjectID = "76L-GN-Kip"; */
+"76L-GN-Kip.normalTitle" = "陣痛";
+
+/* Class = "IBUILabel"; text = "2/7 10:44"; ObjectID = "80m-jW-2wf"; */
+"80m-jW-2wf.text" = "2/7 10:44";
+
+/* Class = "IBUINavigationItem"; title = "진통타이머"; ObjectID = "Eay-uP-JM6"; */
+"Eay-uP-JM6.title" = "진통타이머";
+
+/* Class = "IBUILabel"; text = "00:00"; ObjectID = "HQZ-0s-gcd"; */
+"HQZ-0s-gcd.text" = "00:00";
+
+/* Class = "IBUILabel"; text = "2/7 10:44"; ObjectID = "MaO-hB-Zxo"; */
+"MaO-hB-Zxo.text" = "2/7 10:44";
+
+/* Class = "IBUILabel"; text = "avr. period"; ObjectID = "iFq-fJ-t0B"; */
+"iFq-fJ-t0B.text" = "平均";
+
+/* Class = "IBUIButton"; normalTitle = "Reset"; ObjectID = "qU7-Em-qOk"; */
+"qU7-Em-qOk.normalTitle" = "リセット";
+
+/* Class = "IBUIViewController"; title = "진통타이머"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "진통타이머";
+
+/* Class = "IBUILabel"; text = "00:00"; ObjectID = "waj-9f-she"; */
+"waj-9f-she.text" = "00:00";

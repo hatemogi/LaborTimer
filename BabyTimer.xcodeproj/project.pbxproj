@@ -25,7 +25,9 @@
 		543585B418A3A5040064D179 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5435859618A3A5040064D179 /* UIKit.framework */; };
 		543585BC18A3A5040064D179 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543585BA18A3A5040064D179 /* InfoPlist.strings */; };
 		543585BE18A3A5040064D179 /* BabyTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 543585BD18A3A5040064D179 /* BabyTimerTests.m */; };
-		54F8894718CD78BB00CB05F9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F8894618CD78BB00CB05F9 /* iPad.storyboard */; };
+		54DBC53E18E6902E0001F471 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54DBC54018E6902E0001F471 /* Localizable.strings */; };
+		54DBC54318E691E70001F471 /* AppstoreDescription.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54DBC54218E691E70001F471 /* AppstoreDescription.txt */; };
+		54DBC54818E7C7B80001F471 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54DBC54A18E7C7B80001F471 /* iPad.storyboard */; };
 		54FB264C18A3D6C6004C256B /* BTCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB264B18A3D6C6004C256B /* BTCircleButton.m */; };
 		54FB265318A472C1004C256B /* BTLogRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB265218A472C0004C256B /* BTLogRecord.m */; };
 		54FB265418A472C1004C256B /* BTLogRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FB265218A472C0004C256B /* BTLogRecord.m */; };
@@ -68,7 +70,17 @@
 		543585B918A3A5040064D179 /* BabyTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BabyTimerTests-Info.plist"; sourceTree = "<group>"; };
 		543585BB18A3A5040064D179 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		543585BD18A3A5040064D179 /* BabyTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyTimerTests.m; sourceTree = "<group>"; };
-		54F8894618CD78BB00CB05F9 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		54DBC53F18E6902E0001F471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		54DBC54118E690390001F471 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		54DBC54218E691E70001F471 /* AppstoreDescription.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppstoreDescription.txt; sourceTree = "<group>"; };
+		54DBC54418E7C7210001F471 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		54DBC54518E7C7210001F471 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		54DBC54618E7C7210001F471 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		54DBC54718E7C7210001F471 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		54DBC54918E7C7B80001F471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPad.storyboard; sourceTree = "<group>"; };
+		54DBC54C18E7C7BC0001F471 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/iPad.strings; sourceTree = "<group>"; };
+		54DBC54E18E7C7BE0001F471 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/iPad.strings; sourceTree = "<group>"; };
+		54DBC54F18E7C9580001F471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54FB264A18A3D6C6004C256B /* BTCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCircleButton.h; sourceTree = "<group>"; };
 		54FB264B18A3D6C6004C256B /* BTCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCircleButton.m; sourceTree = "<group>"; };
 		54FB265118A472C0004C256B /* BTLogRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLogRecord.h; sourceTree = "<group>"; };
@@ -102,6 +114,7 @@
 		5435858618A3A5040064D179 = {
 			isa = PBXGroup;
 			children = (
+				54DBC54218E691E70001F471 /* AppstoreDescription.txt */,
 				5435859818A3A5040064D179 /* BabyTimer */,
 				543585B718A3A5040064D179 /* BabyTimerTests */,
 				5435859118A3A5040064D179 /* Frameworks */,
@@ -133,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				543585A418A3A5040064D179 /* Main.storyboard */,
-				54F8894618CD78BB00CB05F9 /* iPad.storyboard */,
+				54DBC54A18E7C7B80001F471 /* iPad.storyboard */,
 				543585A118A3A5040064D179 /* BTAppDelegate.h */,
 				543585A218A3A5040064D179 /* BTAppDelegate.m */,
 				543585A718A3A5040064D179 /* BTViewController.h */,
@@ -157,6 +170,7 @@
 				5435859B18A3A5040064D179 /* InfoPlist.strings */,
 				5435859E18A3A5040064D179 /* main.m */,
 				543585A018A3A5040064D179 /* BabyTimer-Prefix.pch */,
+				54DBC54018E6902E0001F471 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 				en,
 				Base,
 				ko,
+				ja,
 			);
 			mainGroup = 5435858618A3A5040064D179;
 			productRefGroup = 5435859018A3A5040064D179 /* Products */;
@@ -259,7 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F8894718CD78BB00CB05F9 /* iPad.storyboard in Resources */,
+				54DBC53E18E6902E0001F471 /* Localizable.strings in Resources */,
+				54DBC54318E691E70001F471 /* AppstoreDescription.txt in Resources */,
+				54DBC54818E7C7B80001F471 /* iPad.storyboard in Resources */,
 				543585AB18A3A5040064D179 /* Images.xcassets in Resources */,
 				5435859D18A3A5040064D179 /* InfoPlist.strings in Resources */,
 				543585A618A3A5040064D179 /* Main.storyboard in Resources */,
@@ -318,6 +335,8 @@
 			children = (
 				5435859C18A3A5040064D179 /* en */,
 				542461A518B655370038B1BA /* ko */,
+				54DBC54518E7C7210001F471 /* ja */,
+				54DBC54F18E7C9580001F471 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -327,6 +346,7 @@
 			children = (
 				543585A518A3A5040064D179 /* Base */,
 				542461A618B655370038B1BA /* ko */,
+				54DBC54418E7C7210001F471 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -336,8 +356,29 @@
 			children = (
 				543585BB18A3A5040064D179 /* en */,
 				542461A718B655370038B1BA /* ko */,
+				54DBC54718E7C7210001F471 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		54DBC54018E6902E0001F471 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54DBC53F18E6902E0001F471 /* Base */,
+				54DBC54118E690390001F471 /* ko */,
+				54DBC54618E7C7210001F471 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		54DBC54A18E7C7B80001F471 /* iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54DBC54918E7C7B80001F471 /* Base */,
+				54DBC54C18E7C7BC0001F471 /* ko */,
+				54DBC54E18E7C7BE0001F471 /* ja */,
+			);
+			name = iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
