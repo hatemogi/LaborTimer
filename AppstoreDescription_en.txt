@@ -1,0 +1,8 @@
+This app helps you time the period of labor pains. As you approach your due date, you need to know when is the proper time to go to hospital. Your doctor or mid-wife will ask you how close together your contractions are. 
+
+This is an extremely simple timer app that only focuses to time the average period of labor pains. There is no other distracting features. 
+
+# How to Use 
+* Touch "Labor" button whenever each contraction starts. 
+* Touch "Reset" button if you'd like to start over. 
+* Swipe and delete an entry if you have mistakenly touched "Labor" button. 
